@@ -1,0 +1,79 @@
+assig 1 
+# Import TensorFlow
+import tensorflow as tf
+ 
+# Display TensorFlow version
+print("TensorFlow Version:", tf.__version__)
+ 
+# Create two constants
+a = tf.constant(10)
+b = tf.constant(20)
+ 
+# Perform addition
+c = tf.add(a, b)
+ 
+# Display result
+print("Addition of two numbers:", c.numpy())
+ 
+#Keras Test Program
+# Import required libraries
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras import datasets
+ 
+# Load MNIST dataset
+(train_images, train_labels), (test_images, test_labels) = datasets.mnist.load_data()
+ 
+# Display dataset information
+print("Training Images Shape:", train_images.shape)
+print("Training Labels Shape:", train_labels.shape)
+ 
+print("Testing Images Shape:", test_images.shape)
+print("Testing Labels Shape:", test_labels.shape)
+ 
+# Display Keras version
+print("Keras Version:", keras.__version__)
+ 
+#Theano Test Program
+# Import required libraries
+import numpy
+import theano
+import theano.tensor as T
+from theano import function
+ 
+# Declare two scalar variables
+x = T.dscalar('x')
+y = T.dscalar('y')
+ 
+# Perform addition
+z = x + y
+ 
+# Create a callable function
+f = function([x, y], z)
+ 
+# Display result
+print("Addition of two numbers:", f(5, 7))
+ 
+#PyTorch Test Program
+ 
+# Import required libraries
+import torch
+import torch.nn as nn
+ 
+# Display PyTorch version
+print("PyTorch Version:", torch.__version__)
+ 
+# Create two tensors
+a = torch.tensor([10, 20, 30])
+b = torch.tensor([1, 2, 3])
+ 
+# Perform addition
+c = torch.add(a, b)
+ 
+# Display tensors
+print("Tensor A:", a)
+print("Tensor B:", b)
+print("Addition of two tensors:", c)
+ 
+# Check GPU availability
+print("GPU Available:", torch.cuda.is_available())
